@@ -1,0 +1,7 @@
+{
+	"variants": {
+		"": [
+			{ "model": "epic:block/mithril_ore" }
+		]
+	}
+}

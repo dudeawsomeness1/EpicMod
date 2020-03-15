@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "mallorn_saplings",
+  "ingredients": [
+    {
+      "item": "epic:mallorn_sapling"
+    }
+  ],
+  "result": {
+    "item": "epic:mallorn_sapling_autumnal",
+    "count": 1
+  }
+}

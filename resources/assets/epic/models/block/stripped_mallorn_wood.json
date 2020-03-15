@@ -1,0 +1,7 @@
+{
+    "parent": "block/cube_column",
+    "textures": {
+        "end": "epic:block/stripped_mallorn_log",
+        "side": "epic:block/stripped_mallorn_log"
+    }
+}

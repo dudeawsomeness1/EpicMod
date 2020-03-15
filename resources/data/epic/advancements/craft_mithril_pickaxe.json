@@ -1,0 +1,35 @@
+{
+    "display": {
+        "title": {
+            "text": "Strike the Earth!",
+            "bold": true
+        },
+        "description": {
+            "text": "Craft a Mithril Pickaxe"
+        },
+        "icon": {
+            "item": "epic:mithril_pickaxe"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "get mithril pickaxe": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "epic:mithril_pickaxe",
+                        "count": {
+                            "min": 1,
+                            "max": 64
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "parent": "epic:root"
+}

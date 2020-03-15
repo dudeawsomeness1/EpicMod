@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "epic:mithril_ore"
+  },
+  "result": "epic:mithril_ingot",
+  "experience": 1.4,
+  "cookingtime": 100
+}

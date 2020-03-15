@@ -1,0 +1,18 @@
+{
+  "group": "epic",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "RRR",
+    "RRR",
+    "RRR"
+  ],
+  "key": {
+    "R": {
+      "item": "epic:ruby"
+    }
+  },
+  "result": {
+    "item": "epic:ruby_block",
+    "count": 1
+  }
+}

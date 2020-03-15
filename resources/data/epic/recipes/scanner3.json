@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+	{
+	  "item": "epic:scanner2"
+	},
+	{
+	  "item": "epic:ruby"
+	}
+  ],
+  "result": {
+    "item": "epic:scanner3",
+    "count": 1
+  }
+}

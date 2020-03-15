@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "CKC",
+    "WWW",
+    "BMS"
+  ],
+  "key": {
+    "W": {
+      "item": "minecraft:wheat"
+    },
+	"B": {
+      "item": "minecraft:potion",
+	  "data": 1
+    },
+	"C": {
+      "item": "epic:corn"
+    },
+	"M": {
+	  "item": "epic:mallorn_leaves"
+	},
+	"K": {
+	  "item": "minecraft:cake"
+	},
+	"S": {
+      "item": "minecraft:sugar"
+    }
+  },
+  "result": {
+    "item": "epic:lembas",
+    "count": 1
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "variants": {
+	"stage=0": {
+      "model": "epic:block/blessed_corn_stage_0"
+    },
+    "stage=1": {
+      "model": "epic:block/blessed_corn_stage_1"
+    },
+    "stage=2": {
+      "model": "epic:block/blessed_corn_stage_2"
+    },
+    "stage=3": {
+      "model": "epic:block/blessed_corn_stage_3"
+    }
+  }
+}

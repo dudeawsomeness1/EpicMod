@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "I  ",
+    "IRE",
+    "I  "
+  ],
+  "key": {
+    "I": {
+      "item": "minecraft:iron_ingot"
+    },
+	"R": {
+      "item": "minecraft:redstone"
+    },
+	"E": {
+      "item": "minecraft:emerald"
+    }
+  },
+  "result": {
+    "item": "epic:scanner",
+    "count": 1
+  }
+}

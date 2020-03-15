@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "epic:block/blessed_corn_stage_2",
+    "particle": "epic:block/blessed_corn_stage_2"
+  }
+}

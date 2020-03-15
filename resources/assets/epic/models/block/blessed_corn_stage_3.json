@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "epic:block/blessed_corn",
+    "particle": "epic:block/blessed_corn"
+  }
+}

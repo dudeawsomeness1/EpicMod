@@ -1,0 +1,7 @@
+{
+	"parent": "block/cube_all",
+	"textures": {
+		"all": "epic:block/mithril_portal",
+		"particle": "epic:block/mithril_portal"
+	}
+}

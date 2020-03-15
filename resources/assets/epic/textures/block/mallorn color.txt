@@ -1,0 +1,3 @@
+mallorn wood (inside): b6a560
+silver: c0c0c0
+gold: ffd700

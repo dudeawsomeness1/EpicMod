@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "epic:scanner",
+	"epic:scanner2",
+	"epic:scanner3"
+  ]
+}

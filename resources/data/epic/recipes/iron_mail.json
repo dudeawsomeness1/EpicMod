@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "##",
+    "##",
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "epic:thin_iron_wire"
+    }
+  },
+  "result": {
+    "item": "epic:iron_mail",
+    "count": 3
+  }
+}

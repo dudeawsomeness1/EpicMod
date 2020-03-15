@@ -1,0 +1,6 @@
+{
+	"parent": "item/generated",
+	"textures": {
+		"layer0": "epic:item/shard_of_the_interplane"
+	}
+}

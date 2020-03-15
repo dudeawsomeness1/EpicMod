@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "epic:mallorn_log",
+    "epic:mallorn_wood",
+    "epic:stripped_mallorn_log",
+    "epic:stripped_mallorn_wood"
+  ]
+}

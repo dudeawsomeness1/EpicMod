@@ -1,0 +1,40 @@
+{
+    "display": {
+        "title": {
+            "text": "Silver Steel",
+            "color": "gray",
+            "bold": false,
+            "italic": false,
+            "underlined": false,
+            "strikethrough": false,
+            "obfuscated": false
+        },
+        "description": {
+            "text": "Mine some mithril!"
+        },
+        "icon": {
+            "item": "epic:mithril_ore"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false,
+        "background": "epic:textures/block/mallorn_log.png"
+    },
+    "criteria": {
+        "got mithril ore": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "epic:mithril_ore",
+                        "count": {
+                            "min": 1,
+                            "max": 64
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}

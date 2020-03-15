@@ -1,0 +1,7 @@
+{
+	"variants": {
+		"": [
+			{ "model": "epic:block/ruby_ore" }
+		]
+	}
+}

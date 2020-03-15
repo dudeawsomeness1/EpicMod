@@ -1,0 +1,7 @@
+{
+	"parent": "block/cube_all",
+	"textures": {
+		"all": "epic:block/ruby_ore",
+		"particle": "epic:block/ruby_ore"
+	}
+}

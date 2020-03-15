@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "axis=y":  { "model": "epic:block/mallorn_log" },
+        "axis=z":   { "model": "epic:block/mallorn_log", "x": 90 },
+        "axis=x":   { "model": "epic:block/mallorn_log", "x": 90, "y": 90 }
+    }
+}
