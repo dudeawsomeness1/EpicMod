@@ -23,7 +23,8 @@ public class PowerLevelScanner extends ArmorItem {
 	enum Tier { MKI, MKII, MKIII };
 	Tier tier;
 	public PowerLevelScanner(Tier tierIn) {
-		super(scannerMaterial, EquipmentSlotType.HEAD, new Item.Properties().group(EpicMod.EPIC_ITEM_GROUP));
+		super((tierIn == Tier.MKIII) ? scanner3Material : ((tierIn == Tier.MKII) ? scanner2Material : scannerMaterial),
+				EquipmentSlotType.HEAD, new Item.Properties().group(EpicMod.EPIC_ITEM_GROUP));
 		tier = tierIn;
 	}
 	
@@ -64,7 +65,7 @@ public class PowerLevelScanner extends ArmorItem {
 	
 	private static final IArmorMaterial scannerMaterial = new IArmorMaterial() {
 		public int getDurability(EquipmentSlotType slot) {
-			return new int[]{11, 16, 15, 13}[slot.getIndex()] * 15;
+			return new int[]{11, 16, 15, 13}[slot.getIndex()] * 16;
 		}
 
 		public int getDamageReductionAmount(EquipmentSlotType slot) {
@@ -86,6 +87,68 @@ public class PowerLevelScanner extends ArmorItem {
 		@OnlyIn(Dist.CLIENT)
 		public String getName() {
 			return EpicMod.MOD_ID + ":scanner";
+		}
+
+		public float getToughness() {
+			return 0f;
+		}
+	};
+	
+	private static final IArmorMaterial scanner2Material = new IArmorMaterial() {
+		public int getDurability(EquipmentSlotType slot) {
+			return new int[]{11, 16, 15, 13}[slot.getIndex()] * 17;
+		}
+
+		public int getDamageReductionAmount(EquipmentSlotType slot) {
+			return new int[]{1, 2, 4, 1}[slot.getIndex()]; // boots, leggings, chestplate, helmet
+		}
+
+		public int getEnchantability() {
+			return 13;
+		}
+
+		public net.minecraft.util.SoundEvent getSoundEvent() {
+			return (net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.armor.equip_iron"));
+		}
+
+		public Ingredient getRepairMaterial() {
+			return Ingredient.fromStacks(new ItemStack(Items.IRON_INGOT, (int) (1)));
+		}
+
+		@OnlyIn(Dist.CLIENT)
+		public String getName() {
+			return EpicMod.MOD_ID + ":scanner2";
+		}
+
+		public float getToughness() {
+			return 0f;
+		}
+	};
+	
+	private static final IArmorMaterial scanner3Material = new IArmorMaterial() {
+		public int getDurability(EquipmentSlotType slot) {
+			return new int[]{11, 16, 15, 13}[slot.getIndex()] * 18;
+		}
+
+		public int getDamageReductionAmount(EquipmentSlotType slot) {
+			return new int[]{1, 2, 4, 1}[slot.getIndex()]; // boots, leggings, chestplate, helmet
+		}
+
+		public int getEnchantability() {
+			return 15;
+		}
+
+		public net.minecraft.util.SoundEvent getSoundEvent() {
+			return (net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.armor.equip_iron"));
+		}
+
+		public Ingredient getRepairMaterial() {
+			return Ingredient.fromStacks(new ItemStack(Items.IRON_INGOT, (int) (1)));
+		}
+
+		@OnlyIn(Dist.CLIENT)
+		public String getName() {
+			return EpicMod.MOD_ID + ":scanner3";
 		}
 
 		public float getToughness() {

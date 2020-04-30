@@ -12,11 +12,13 @@ import net.minecraftforge.registries.ObjectHolder;
 @ObjectHolder(EpicMod.MOD_ID)
 public class EpicBiomes {
 	public static Biome valinorianForest = null;
+	public static Biome barrowDowns = null;
 	
 	@SubscribeEvent
     public static void registerBiomes(RegistryEvent.Register<Biome> event) {
 		event.getRegistry().registerAll(
-			valinorianForest = new ValinorianForest().setRegistryName(EpicMod.MOD_ID, "valinorian_forest")
+			valinorianForest = new ValinorianForest().setRegistryName(EpicMod.MOD_ID, "valinorian_forest"),
+			barrowDowns = new BarrowDowns().setRegistryName(EpicMod.MOD_ID, "barrow_downs")
 		);
 	}
 }

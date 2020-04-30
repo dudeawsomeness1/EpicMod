@@ -73,11 +73,13 @@ public class BarrowWight extends MonsterEntity {
 		for (Biome biome : ForgeRegistries.BIOMES.getValues()) {
 			/// cannot spawn in Valinorian Forest
 			boolean biomeCriteria = false;
-			if (!(ForgeRegistries.BIOMES.getKey(biome).equals(new ResourceLocation(EpicMod.MOD_ID + ":valinorian_forest"))))
+			/*if (!(ForgeRegistries.BIOMES.getKey(biome).equals(new ResourceLocation(EpicMod.MOD_ID + ":valinorian_forest"))))
+				biomeCriteria = true;*/
+			if (ForgeRegistries.BIOMES.getKey(biome).equals(new ResourceLocation(EpicMod.MOD_ID + ":barrow_downs")))
 				biomeCriteria = true;
 			if (!biomeCriteria)
 				continue;
-			biome.getSpawns(EntityClassification.MONSTER).add(new Biome.SpawnListEntry(EpicEntities.BARROW_WIGHT, 4, 1, 7));
+			biome.getSpawns(EntityClassification.MONSTER).add(new Biome.SpawnListEntry(EpicEntities.BARROW_WIGHT, 6, 1, 7));
 		}
 	}
 	
@@ -114,10 +116,10 @@ public class BarrowWight extends MonsterEntity {
         this.goalSelector.addGoal(6, (Goal)new MoveThroughVillageGoal((CreatureEntity)this, 1.0, true, 4, this::isBreakDoorsTaskSet));
         this.goalSelector.addGoal(7, (Goal)new WaterAvoidingRandomWalkingGoal((CreatureEntity)this, 1.0));
         this.targetSelector.addGoal(1, (Goal)new HurtByTargetGoal((CreatureEntity)this, new Class[0]).setCallsForHelp(new Class[] { this.getClass() }));
-        this.targetSelector.addGoal(2, (Goal)new NearestAttackableTargetGoal((MobEntity)this, (Class)PlayerEntity.class, true));
-        this.targetSelector.addGoal(3, (Goal)new NearestAttackableTargetGoal((MobEntity)this, (Class)AbstractVillagerEntity.class, false));
-        this.targetSelector.addGoal(3, (Goal)new NearestAttackableTargetGoal((MobEntity)this, (Class)IronGolemEntity.class, true));
-        this.targetSelector.addGoal(5, (Goal)new NearestAttackableTargetGoal((MobEntity)this, (Class)TurtleEntity.class, 10, true, false, TurtleEntity.TARGET_DRY_BABY));
+        this.targetSelector.addGoal(2, (Goal)new NearestAttackableTargetGoal<PlayerEntity>((MobEntity)this, (Class)PlayerEntity.class, true));
+        this.targetSelector.addGoal(3, (Goal)new NearestAttackableTargetGoal<AbstractVillagerEntity>((MobEntity)this, (Class)AbstractVillagerEntity.class, false));
+        this.targetSelector.addGoal(3, (Goal)new NearestAttackableTargetGoal<IronGolemEntity>((MobEntity)this, (Class)IronGolemEntity.class, true));
+        this.targetSelector.addGoal(5, (Goal)new NearestAttackableTargetGoal<TurtleEntity>((MobEntity)this, (Class)TurtleEntity.class, 10, true, false, TurtleEntity.TARGET_DRY_BABY));
     }
 	
 	public boolean isBreakDoorsTaskSet() {
@@ -158,7 +160,7 @@ public class BarrowWight extends MonsterEntity {
 
 	@Override
 	public SoundEvent getAmbientSound() {
-		return (SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(EpicSounds.BARROW_WIGHT_AMBIENT);
+		return EpicSounds.BARROW_WIGHT_AMBIENT;
 	}
 
 	@Override

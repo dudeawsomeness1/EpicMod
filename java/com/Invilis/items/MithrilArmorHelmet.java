@@ -1,15 +1,15 @@
 package com.Invilis.items;
 
 import com.Invilis.events.MithrilArmorHelmetTickEvent;
+import com.Invilis.magic.MagicArmor;
 
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.inventory.EquipmentSlotType;
-import net.minecraft.item.ArmorItem;
 import net.minecraft.item.IArmorMaterial;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
-public class MithrilArmorHelmet extends ArmorItem {
+public class MithrilArmorHelmet extends MagicArmor /*ArmorItem*/ {
 	public MithrilArmorHelmet(IArmorMaterial materialIn, EquipmentSlotType slot, Properties builder) {
 		super(materialIn, slot, builder);
 	}

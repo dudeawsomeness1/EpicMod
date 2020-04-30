@@ -1,5 +1,6 @@
 package com.Invilis.biomes;
 
+import com.Invilis.entities.EpicEntities;
 import com.Invilis.features.EpicFeatures;
 
 import net.minecraft.block.Blocks;
@@ -13,11 +14,9 @@ import net.minecraft.world.gen.surfacebuilders.SurfaceBuilderConfig;
 import net.minecraft.world.gen.GenerationStage;
 import net.minecraft.world.gen.feature.BushConfig;
 import net.minecraft.world.gen.feature.Feature;
-import net.minecraft.world.gen.feature.GrassFeatureConfig;
 import net.minecraft.world.gen.feature.IFeatureConfig;
 import net.minecraft.world.gen.placement.AtSurfaceWithExtraConfig;
 import net.minecraft.world.gen.placement.ChanceConfig;
-import net.minecraft.world.gen.placement.FrequencyConfig;
 import net.minecraft.world.gen.placement.Placement;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
@@ -45,11 +44,17 @@ public class ValinorianForest extends Biome {
 		DefaultBiomeFeatures.addStructures(this);
 		DefaultBiomeFeatures.addMonsterRooms(this);
 		DefaultBiomeFeatures.addOres(this);
+		DefaultBiomeFeatures.addSedimentDisks(this);
+		DefaultBiomeFeatures.addStoneVariants(this);
 		DefaultBiomeFeatures.addLakes(this);
-		addFeature(GenerationStage.Decoration.VEGETAL_DECORATION, Biome.createDecoratedFeature(Feature.DEFAULT_FLOWER,
-				IFeatureConfig.NO_FEATURE_CONFIG, Placement.COUNT_HEIGHTMAP_32, new FrequencyConfig(2)));
-		addFeature(GenerationStage.Decoration.VEGETAL_DECORATION, Biome.createDecoratedFeature(Feature.GRASS,
-				new GrassFeatureConfig(Blocks.GRASS.getDefaultState()), Placement.COUNT_HEIGHTMAP_DOUBLE, new FrequencyConfig(4)));
+		DefaultBiomeFeatures.addSparseBerryBushes(this);
+		DefaultBiomeFeatures.addReedsAndPumpkins(this);
+		DefaultBiomeFeatures.addDefaultFlowers(this);
+		DefaultBiomeFeatures.addGrass(this);
+		/*addFeature(GenerationStage.Decoration.VEGETAL_DECORATION, Biome.createDecoratedFeature(Feature.DEFAULT_FLOWER,
+				IFeatureConfig.NO_FEATURE_CONFIG, Placement.COUNT_HEIGHTMAP_32, new FrequencyConfig(2)));*/
+		/*addFeature(GenerationStage.Decoration.VEGETAL_DECORATION, Biome.createDecoratedFeature(Feature.GRASS,
+				new GrassFeatureConfig(Blocks.GRASS.getDefaultState()), Placement.COUNT_HEIGHTMAP_DOUBLE, new FrequencyConfig(4)));*/
 		addFeature(GenerationStage.Decoration.VEGETAL_DECORATION, Biome.createDecoratedFeature(Feature.BUSH,
 				new BushConfig(Blocks.BROWN_MUSHROOM.getDefaultState()), Placement.CHANCE_HEIGHTMAP_DOUBLE, new ChanceConfig(1)));
 		addFeature(GenerationStage.Decoration.VEGETAL_DECORATION, Biome.createDecoratedFeature(Feature.BUSH,
@@ -59,15 +64,18 @@ public class ValinorianForest extends Biome {
 		addFeature(GenerationStage.Decoration.VEGETAL_DECORATION, Biome.createDecoratedFeature(EpicFeatures.mallornTree,
 				IFeatureConfig.NO_FEATURE_CONFIG, Placement.COUNT_EXTRA_HEIGHTMAP, new AtSurfaceWithExtraConfig(3, 0.1f, 1)));
 		
-		this.addSpawn(EntityClassification.CREATURE, new Biome.SpawnListEntry(EntityType.HORSE, 15, 1, 5));
+		this.addSpawn(EntityClassification.CREATURE, new Biome.SpawnListEntry(EntityType.HORSE, 10, 1, 5));
 		this.addSpawn(EntityClassification.CREATURE, new Biome.SpawnListEntry(EntityType.RABBIT, 15, 1, 8));
 		this.addSpawn(EntityClassification.CREATURE, new Biome.SpawnListEntry(EntityType.SHEEP, 15, 1, 5));
 		this.addSpawn(EntityClassification.WATER_CREATURE, new Biome.SpawnListEntry(EntityType.SALMON, 16, 1, 5));
 		this.addSpawn(EntityClassification.WATER_CREATURE, new Biome.SpawnListEntry(EntityType.TROPICAL_FISH, 15, 1, 5));
 		this.addSpawn(EntityClassification.CREATURE, new Biome.SpawnListEntry(EntityType.WOLF, 15, 1, 5));
 		this.addSpawn(EntityClassification.CREATURE, new Biome.SpawnListEntry(EntityType.FOX, 15, 1, 5));
-		this.addSpawn(EntityClassification.MONSTER, new Biome.SpawnListEntry(EntityType.ENDERMAN, 14, 1, 3));
+		this.addSpawn(EntityClassification.MONSTER, new Biome.SpawnListEntry(EntityType.ENDERMAN, 4, 1, 3));
 		this.addSpawn(EntityClassification.MONSTER, new Biome.SpawnListEntry(EntityType.WITCH, 1, 1, 3));
+		this.addSpawn(EntityClassification.MONSTER, new Biome.SpawnListEntry(EntityType.ZOMBIE_VILLAGER, 2, 1, 3));
+		this.addSpawn(EntityClassification.MONSTER, new Biome.SpawnListEntry(EntityType.ZOMBIE, 1, 1, 3));
+		//this.addSpawn(EntityClassification.CREATURE, new Biome.SpawnListEntry(EpicEntities.ELF, 10, 1, 5));
 	}
 	
 	@OnlyIn(Dist.CLIENT)

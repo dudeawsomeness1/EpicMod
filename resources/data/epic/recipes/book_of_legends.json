@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:gold_ingot"
+    },
+	{
+      "item": "minecraft:book"
+    },
+	{
+	  "item": "epic:ruby"
+	}
+  ],
+  "result": {
+    "item": "patchouli:guide_book",
+	"nbt": {
+		"patchouli:book": "book_of_legends"
+	}
+    "count": 1
+  }
+}

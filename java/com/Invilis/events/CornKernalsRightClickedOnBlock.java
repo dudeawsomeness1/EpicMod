@@ -41,7 +41,7 @@ public class CornKernalsRightClickedOnBlock {
 				.getBlockState(new BlockPos(x, y + 1, z))).getBlock() == Blocks.AIR.getDefaultState().getBlock()))) {
 			world.setBlockState(new BlockPos(x, y + 1, z), EpicBlocks.blessedCorn.getDefaultState(), 3);
 			if (entity instanceof PlayerEntity)
-				((PlayerEntity) entity).inventory.clearMatchingItems(p -> EpicItems.cornKernals == p.getItem(), (int) 1);
+				((PlayerEntity) entity).inventory.clearMatchingItems(p -> EpicItems.cornKernels == p.getItem(), (int) 1);
 		}
 	}
 }

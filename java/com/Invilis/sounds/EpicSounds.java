@@ -12,10 +12,14 @@ import net.minecraftforge.registries.ObjectHolder;
 @Mod.EventBusSubscriber(modid = EpicMod.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 @ObjectHolder(EpicMod.MOD_ID)
 public class EpicSounds {
-	public static ResourceLocation BARROW_WIGHT_AMBIENT = new ResourceLocation(EpicMod.MOD_ID, "sound/barrow_wight.ogg");
+	//public static ResourceLocation BARROW_WIGHT_AMBIENT = new ResourceLocation(EpicMod.MOD_ID, "barrow_wight_ambient");
+	//public static ResourceLocation KERNELS_PLACED = new ResourceLocation(EpicMod.MOD_ID, "kernels_placed");
+	public static final SoundEvent BARROW_WIGHT_AMBIENT = new SoundEvent(new ResourceLocation(EpicMod.MOD_ID, "barrow_wight_ambient"));
+	public static final SoundEvent KERNELS_PLACED = new SoundEvent(new ResourceLocation(EpicMod.MOD_ID, "kernels_placed"));
 	
 	@SubscribeEvent
 	public void registerSounds(RegistryEvent.Register<net.minecraft.util.SoundEvent> event) {
-		event.getRegistry().register(new SoundEvent(BARROW_WIGHT_AMBIENT).setRegistryName(EpicMod.MOD_ID, "barrow_wight_ambient"));
+		event.getRegistry().register(BARROW_WIGHT_AMBIENT.setRegistryName(EpicMod.MOD_ID, "barrow_wight_ambient"));
+		event.getRegistry().register(KERNELS_PLACED.setRegistryName(EpicMod.MOD_ID, "kernels_placed"));
 	}
 }

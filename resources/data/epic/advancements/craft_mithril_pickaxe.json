@@ -31,5 +31,5 @@
             }
         }
     },
-    "parent": "epic:root"
+    "parent": "epic:mine_mithril"
 }

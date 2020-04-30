@@ -1,0 +1,15 @@
+{
+	"name": "Overview",
+	"icon": "epic:mithril_ore",
+	"category": "mithril",
+	"pages": [
+		{
+			"type": "text",
+			"text": "Mithril or Silver Steel, is an exceptionally strong material able to stave off even the strongest of blows. It's shimmering silver light is akin to the glow of a full moon, and so it is certainly a sight to see in the dark caverns below. In short, this material is durable, pretty, and dormant in magical abilities, at least until you awaken them. Take care when eagerly trying to"
+		},
+		{
+			"type": "text",
+			"text": "get your hands on this material for it will take a refined tool to harvest from the earth; perhaps the clear cut diamond will do the trick."
+		}
+	]
+}

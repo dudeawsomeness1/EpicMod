@@ -5,6 +5,8 @@ import java.util.function.BiFunction;
 import javax.annotation.Nullable;
 
 import com.Invilis.EpicMod.EpicMod;
+import com.Invilis.biomes.EpicBiomes;
+import com.Invilis.dimensions.EpicDimensions;
 
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.util.ResourceLocation;
@@ -14,14 +16,14 @@ import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.Biome;
+import net.minecraft.world.biome.Biomes;
 import net.minecraft.world.dimension.Dimension;
 import net.minecraft.world.dimension.DimensionType;
 import net.minecraft.world.gen.ChunkGenerator;
 import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.common.DimensionManager;
 import net.minecraftforge.common.ModDimension;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.api.distmarker.Dist;
 
 public class ElvenDimension extends Dimension {
@@ -31,13 +33,7 @@ public class ElvenDimension extends Dimension {
 	public ElvenDimension(World worldIn, DimensionType typeIn) {
 		super(worldIn, typeIn);
 		this.nether = false;
-		//type = DimensionType.byName(new ResourceLocation(EpicMod.MOD_ID, "elven_realm"));
 	}
-	
-	/*public static DimensionType type()
-	{
-		return DimensionType.byName(new ResourceLocation(EpicMod.MOD_ID + ":valinorian_forest"));
-	}*/
 	
 	public static class CustomModDimension extends ModDimension {
 		@Override
@@ -47,10 +43,21 @@ public class ElvenDimension extends Dimension {
 	}
 	
 	public static void init(FMLCommonSetupEvent event) {
-		dimensionBiomes = new Biome[]{ForgeRegistries.BIOMES.getValue(new ResourceLocation(EpicMod.MOD_ID + ":valinorian_forest")),
-				ForgeRegistries.BIOMES.getValue(new ResourceLocation("ocean")), ForgeRegistries.BIOMES.getValue(new ResourceLocation("plains")),
-				ForgeRegistries.BIOMES.getValue(new ResourceLocation("mountains")), ForgeRegistries.BIOMES.getValue(new ResourceLocation("forest")),
-				ForgeRegistries.BIOMES.getValue(new ResourceLocation("river")),};
+		dimensionBiomes = new Biome[]{
+				EpicBiomes.valinorianForest,
+				Biomes.FLOWER_FOREST,
+				Biomes.OCEAN,
+				Biomes.PLAINS,
+				Biomes.MOUNTAINS,
+				Biomes.FOREST,
+				Biomes.SUNFLOWER_PLAINS,
+				Biomes.WOODED_HILLS,
+				Biomes.TALL_BIRCH_FOREST,
+				Biomes.DEEP_OCEAN};
+		
+		if (DimensionType.byName(new ResourceLocation(EpicMod.MOD_ID, "elven_realm")) == null) {
+			ElvenDimension.type = DimensionManager.registerOrGetDimension(new ResourceLocation(EpicMod.MOD_ID, "elven_realm"), EpicDimensions.ELVEN_REALM, null, true);
+		}
 	}
 
 	@Override

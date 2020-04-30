@@ -1,0 +1,7 @@
+{
+	"variants": {
+		"": [
+			{ "model": "epic:block/corn_kernel_block" }
+		]
+	}
+}

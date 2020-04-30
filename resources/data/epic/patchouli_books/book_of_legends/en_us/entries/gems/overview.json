@@ -1,0 +1,41 @@
+{
+	"name": "Overview",
+	"icon": "minecraft:diamond",
+	"category": "gems",
+	"pages": [//380 char
+		{
+			"type": "text",
+			"text": "Listed here are the twelve birthstones:$(br)$(li)$(9e0808)Garnet$(br)$(li)$(9966cc)Amethyst$(br)$(li)$(1cbbff)Aquamarine$(br)$(li)$(14d7f5)Diamond$(br)$(li)$(13c70a)Emerald$(br)$(li)$(edddaf)Pearl$(br)$(li)$(ff0a0a)Ruby$(br)$(li)$(70ff29)Peridot$(br)$(li)$(0718fa)Sapphire$(br)$(li)$(f194ff)Opal$(br)$(li)$(ffa617)Topaz$(br)$(li)$(8600cf)Tanzanite"
+		},
+		{
+			"type": "spotlight",
+			"item": "epic:garnet",
+			"text": "Garnet is a durable gem used in many pieces jewlery known for its deep red color."
+		},
+		{
+			"type": "spotlight",
+			"item": "epic:amethyst",
+			"text": "This gem is one of the more enchanting ones both in beauty and in a magical sense. Amethyst seems to have an ability to channel life force quicker than normal giving it the potential to heal ones injuries faster."
+		},
+		{
+			"type": "spotlight",
+			"item": "epic:aquamarine",
+			"text": "Named after its soothing sea blue color this gem seems to eminate a refreshing and cool sensation like a gentle mist from the ocean."
+		},
+		{
+			"type": "spotlight",
+			"item": "minecraft:diamond",
+			"text": "The everlasting diamond, a legendary jewel known everywhere for its hardiness and pure beauty. The diamond is simply remarkable and is used to create many powerful objects."
+		},
+		{
+			"type": "spotlight",
+			"item": "minecraft:emerald",
+			"text": "The emerald is coveted by many as an object of value and commerce, it was even the object of passion for the gang called \"The B-Team\" in somewhat recent history for the Mindcrack nation."
+		},
+		{
+			"type": "spotlight",
+			"item": "epic:pearl",
+			"text": "This unique object is representitive of admirability and fine beauty and unlike most gems it will be found under the sea closely guarded by the one who made it. For those who are deemed worthy and present a gift of gratitude the creature may be persuaded to relinquish its prize. Be sure that you do not attempt to take it by force for you will be met with great resistance and not only from the creature. You are most likely to find these fine gemstones at the bottom of an ocean where aa oyster is residing."
+		}
+	]
+}

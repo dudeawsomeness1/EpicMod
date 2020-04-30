@@ -1,5 +1,6 @@
 package com.Invilis.EpicMod;
 
+import com.Invilis.biomes.BarrowDowns;
 import com.Invilis.biomes.ValinorianForest;
 import com.Invilis.blocks.Athelas;
 import com.Invilis.blocks.BlessedCorn;
@@ -8,6 +9,8 @@ import com.Invilis.brewing.AthelasTeaRecipe;
 import com.Invilis.dimensions.Elven.ElvenDimension;
 import com.Invilis.entities.EpicEntities;
 import com.Invilis.entities.BarrowWight.BarrowWight;
+import com.Invilis.entities.Elf.Elf;
+import com.Invilis.entities.Shark.Shark;
 import com.Invilis.inventory.CustomChestContainerType;
 import com.Invilis.renderer.GuiOverlay;
 
@@ -36,9 +39,7 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.brewing.BrewingRecipeRegistry;
 import net.minecraftforge.fml.DeferredWorkQueue;
 import net.minecraftforge.fml.DistExecutor;
-import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -124,8 +125,12 @@ public class EpicMod {
 		init_Ruby_Ore_spawn(event);
 		
 		ValinorianForest.init(event);
+		BarrowDowns.init(event);
 		
-		//BarrowWight.init(event);
+		BarrowWight.init(event);
+		Shark.init(event);
+		//Oyster.init(event);
+		Elf.init(event);
 		
 		ElvenDimension.init(event);
 		

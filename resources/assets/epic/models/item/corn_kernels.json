@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "epic:item/corn_kernals"
+    "layer0": "epic:item/corn_kernels"
   }
 }

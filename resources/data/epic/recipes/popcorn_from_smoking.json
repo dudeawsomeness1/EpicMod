@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smoking",
+  "ingredient": {
+    "item": "epic:bucket_of_corn_kernels"
+  },
+  "result": "epic:popcorn",
+  "experience": 0.35,
+  "cookingtime": 100
+}

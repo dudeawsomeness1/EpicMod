@@ -2,18 +2,15 @@ package com.Invilis.EpicMod;
 
 import java.util.Random;
 
-import com.Invilis.dimensions.EpicDimensions;
-import com.Invilis.dimensions.Elven.ElvenDimension;
+import com.Invilis.entities.BarrowWight.BarrowWight;
 import com.Invilis.items.EpicItems;
+import com.Invilis.mob_effects.EpicMobEffects;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.common.DimensionManager;
+import net.minecraft.potion.EffectInstance;
 import net.minecraftforge.event.entity.living.LivingAttackEvent;
-import net.minecraftforge.event.world.RegisterDimensionsEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
@@ -32,6 +29,9 @@ public class EpicEventHandler {
                 	activeItem.shrink(1);
                 	activeItem.setDamage(0);
 				}
+            }
+            else if (event.getSource().getImmediateSource() instanceof BarrowWight) {
+            	((PlayerEntity) entity).addPotionEffect(new EffectInstance(EpicMobEffects.black_breath, (int) 3*30, (int) 0, false, true));
             }
         }
     }

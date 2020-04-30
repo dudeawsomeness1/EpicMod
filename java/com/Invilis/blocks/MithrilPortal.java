@@ -97,6 +97,7 @@ public class MithrilPortal extends NetherPortalBlock {
 				for (int i = 0; i < netherportalblock$size.getWidth(); ++i) {
 					for (int j = 0; j < netherportalblock$size.getHeight(); ++j) {
 						CachedBlockInfo cachedblockinfo = blockpattern$patternhelper.translateOffset(i, j, 1);
+						//if (!(cachedblockinfo.getBlockState() == Blocks.AIR.getDefaultState())) {
 						if (!cachedblockinfo.getBlockState().isAir()) {
 							++aint[direction$axisdirection.ordinal()];
 						}
